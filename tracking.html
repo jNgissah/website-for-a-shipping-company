@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/log.jpeg">
+
+  <title>ZF1 Garden Logistics</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="dist/aos.css">
+</head>
+
+<div class="loading">
+    <img src="img/loader.gif" alt="">
+</div>
+
+
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4 class="center-align">List of items</h4>
+   
+                             <table class="striped responsive-table ">
+        <thead>
+          <tr>
+              <th></th>
+              <th>Item</th>
+              <th>Quantity</th>
+              <th>CBM</th>
+              <th>Price ($)</th>
+          </tr>
+        </thead>
+
+        <tbody class="body">
+          
+          
+          
+            
+        </tbody>
+      </table>
+        
+        <h5 class="center-align">Total Price: $<span class="total_price"></span></h5>
+        
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+          
+<body>
+ <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+     <a id="logo-container" href="index.html" class="brand-logo" > <img src="img/logo12.svg" id="logo_img" alt=""> </a>
+      
+      <ul class="right hide-on-med-and-down">
+<!--        <li><a href="index.html">Home</a></li>-->
+        <li><a href="tracking.html">Tracking</a></li>
+         <li><a href="services.html">Services</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
+        <li><a href="termsandconditions.html">Terms and Conditions</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+<!--        <li><a href="index.html">Home</a></li>-->
+        <li><a href="tracking.html">Tracking</a></li>
+         <li><a href="services.html">Services</a></li>
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
+        
+        <li><a href="termsandconditions.html">Terms and Conditions</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2"></h1>
+        <div class="row center">
+          <h5 class="header col s12 light">     </h5>
+        </div>
+        <div class="row center">
+<!--          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>-->
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax">
+       <div class="paralax_b"></div>
+        <img src="img/6%20(1).jpg" alt="Unsplashed background img 1 parabig">
+        <img src="img/phone3.jpg"  alt="Unsplashed background img 1 parasmall">
+      </div>
+      <div style="margin-top:-30px">
+      <!--<h1 class="center-align main_write" style="margin-bottom:0px" data-aos="fade-up">Track your shipment</h1>-->
+     
+     
+      </div>
+  </div>
+    
+  
+ 
+ 
+  <div class="containe">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4 data-aos="fade-up">Tracking Shipments</h4>
+          <p class="center-align light" data-aos="fade-up">
+          Here’s the fastest way to check the status of your shipment. No need to call Customer Service. <br> Our online results give you real-time, detailed progress as your shipment speeds
+            </p>
+            <br>
+            <div class="container">
+           
+             
+                <div class="container">
+                   
+                
+                      
+                      <div class="">
+                      
+                       <div class="row">
+                          <div class="loader">
+                <img src="img/loader.gif" width="10%" alt="">
+            </div>
+    <form class="col s12" onsubmit="return false" id="tracker" data-aos="fade-up">
+      <div class="container">
+        <div class="input-field">
+          <input type="text" id="textarea1" class="materialize-textarea" required>
+          <label for="textarea1">Enter tracking number</label>
+        </div>
+      </div> 
+       <div class="">
+        <div class="input-field ">
+         
+          <input type="submit" class="btn track" value="Track">
+        </div>
+      </div>
+      
+    </form>
+  </div>
+                   
+               
+                               
+                   </div>
+                     
+                      <div class="results ">
+                 <div class="row">
+                     <div class="col s2 l2 m2"></div>
+                     <div class="col s8 l8 m8 left-align z-depth-2">
+                         
+                           <div class="shipping">
+                     <p class="center-align"><b style="margin-bottom:5px">RESULT SUMMARY</b>  </p>
+                     <b>Sender: <span class="sender light">location here</span></b> <br>
+                     <b>Receiver: <span class="receiver light">location here</span></b> <br>
+                     <b>Status: <span class="status light">location here</span></b> <br>
+                     <b>Destination: <span class="destination light">location here</span></b> <br>
+                     <b>Date Sent: <span class="date light">location here</span></b> <br>
+                     <b>Amount Paid: <span class="amount_paid light">location here</span></b> <br>
+                     <b>Date Paid: <span class="date_ light">location here</span></b> <br>
+                     <br>
+                     <div class="center-align">
+                        <b style=" color:red">NOTE</b> <br>
+                         <span class="small" style="font-size:14px; color:red"> The cost and CBM for this shipment is estiamted based on the figures given by client. The actual cost and CBM will be calculated and confirmed when the shipment arrives.</span>
+                     </div>
+                     
+                     <br>
+<!--                     <b>Status: <span>location here</span></b>-->
+<!--                     <br>-->
+                     
+<!--
+                      <table class="striped responsive-table ">
+        <thead>
+          <tr>
+              <th></th>
+              <th>Action</th>
+              <th>Location</th>
+              <th>Time</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Arrived in china warehouse</td>
+            <td>warehouse location</td>
+            <td>8:20am</td>
+          </tr>
+          
+          <tr>
+            <td>2</td>
+            <td>Arrived in china warehouse</td>
+            <td>warehouse location</td>
+            <td>8:20am</td>
+          </tr>
+          
+          <tr>
+            <td>3</td>
+            <td>Arrived in china warehouse</td>
+            <td>warehouse location</td>
+            <td>8:20am</td>
+          </tr>
+            
+        </tbody>
+      </table>
+               
+-->
+                <br>  
+                <div class="center-align">
+                  <a class="waves-effect waves-light btn modal-trigger viewer" href="#modal1">View Items</a>
+     
+                </div>        
+  
+<!--<button class="btn btn-dark viewer">View Item(s)</button>-->
+               <br>
+               <br>               </div>   
+               
+                         
+                         
+                     </div>
+                     <div class="col s2 l4 m2"></div>
+                 </div>
+                   
+                  
+                   
+                </div>
+                     
+                </div>   
+                
+                
+            </div>
+            
+            If you would prefer to speak to someone personally about the location of your shipment, please contact <a href="contact_us.html">ZF1 Express customer service</a>.
+            
+           
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+ 
+<div class="back">
+ <div style="padding-top:60px; margin-top:60px; width:100%" class="container back_">
+   <div class="container">
+     <p  class="new_color aos-ite"  style="padding-top:20px"><b>NEED HELP?</b></p>
+      <h4 ><b>Walk to any of our Offices.</b></h4>   
+      
+      <div class="row">
+          <div class="col l6 s12 m6 " >
+            <div  class="new_color_" style="padding-left:20px; margin:5px; margin-left:0px">
+             <br>
+              <span style="color:white; font-size:20px"><b>CHINA OFFICE</b></span>
+              <br>
+              <span style="margin-top:5px"><b>Guangzhou</b></span> <br>
+              <a href="tel:+861 8460 0729 40" style="color:white; margin-top:5px">+861 8460 0729 40</a>
+              <br>
+<!--              <br>-->
+              <a href="contact_us.html" class="btn new_color_"  style="margin-top:8px">CONTACT US</a>
+              <br>
+              <br>
+              </div>
+          </div>
+          <div class="col l6 s12 m6">
+             <div style="padding-left:20px; margin:5px; margin-left:0px" class="new_color_">
+             <br>
+              <span style="color:white; font-size:20px"><b>GHANA, GREATER ACCRA OFFICE</b></span>
+              <br>
+              <span style="margin-top:5px"><b>Taifa-Accra</b></span> <br>
+              <a href="tel:+233 302 441 765" style="color:white; margin-top:5px">+233 302 441 765</a>
+              <br>
+<!--              <br>-->
+              <a href="contact_us.html" class="btn new_color_"  style="margin-top:8px">CONTACT US</a>
+              <br>
+              <br>
+              </div>
+          </div>
+            <div class="col l6 s12 m6 " >
+             <div style="padding-left:20px; margin:5px; margin-left:0px" class="new_color_">
+             <br>
+              <span style="color:white; font-size:20px"><b>GHANA, ASHANTI REGION OFFICE</b></span>
+              <br>
+              <span style="margin-top:5px"><b>Asafo-Kumasi</b></span> <br>
+              <a href="tel:+233 302 441 765" style="color:white; margin-top:5px">+233 302 441 765</a>
+              <br>
+<!--              <br>-->
+              <a href="contact_us.html" class="btn new_color_"  style="margin-top:8px">CONTACT US</a>
+              <br>
+              <br>
+                </div>
+          </div>
+           <div class="col l6 s12 m6 " >
+             <div style="padding-left:20px; margin:5px; margin-left:0px" class="new_color_">
+             <br>
+              <span style="color:white; font-size:20px"><b>GHANA, BONO REGION OFFICE</b></span>
+              <br>
+              <span style="margin-top:5px"><b>Airport Residential-Sunyani</b></span> <br>
+              <a href="tel:+233 302 441 765" style="color:white; margin-top:5px">+233 302 441 765</a>
+              <br>
+<!--              <br>-->
+              <a href="contact_us.html" class="btn new_color_"  style="margin-top:8px">CONTACT US</a>
+              <br>
+              <br>
+               </div>
+          </div>
+          
+          
+      </div>
+       
+   </div>
+   </div>
+</div>
+
+
+<!--<a href="https://apps.mnotify.net/smsapi?key=5AXXgPnYS0WlJR6TPgPbgUX5N&to=+233268005074&msg=hi Joseph&sender_id=Joseph"> send message</a>-->
+    
+ 
+    
+    
+    
+   
+
+ 
+  <footer class="page-footer new_color_">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">ZF1 Garden Logistics is a full-service logistics services provider with our offices in Ghana/China. We work with clients in Ghana and abroad to support their domestic and international logistics needs via road, air, rail, and sea transport.</p>
+
+
+        </div>
+        <div class="col l4 s12">
+          <h5 class="white-text">Quick Links</h5>
+          <ul>
+           <li><a class="white-text " href="img/Shipping%20Service%20Agreement.pdf"  download >Terms and Conditions</a></li>
+            <li><a class="white-text" href="about_us.html">About Us</a></li>
+            <li><a class="white-text" href="tracking.html">Tracking</a></li>
+<!--            <li><a class="white-text" href="buy.html">Order Now</a></li>-->
+          </ul>
+        </div>
+        <div class="col l4 s12">
+          <h5 class="white-text">Contact Us</h5>
+          
+            <div class="row">
+               <div class="col l1 s1 m1">
+                   <i class="material-icons">location_on</i>
+               </div>
+               <div class="col l10 s10 m10" style="margin-left:5px"> Kumasi, Ghana</div>
+           </div>   
+            
+             <div class="row">
+               <div class="col l1 s1 m1">
+                   <i class="material-icons">mail</i>
+               </div>
+               <div class="col l10 s10 m10" style="margin-left:5px"> <a class="white-text" href="mailto:support@ZF1logistics.com"> support@ZF1logistics.com </a> </div>
+           </div>   
+            
+            <div class="row">
+               <div class="col l1 s1 m1">
+                   <i class="material-icons">phone</i>
+               </div>
+               <div class="col l10 s10 m10" style="margin-left:5px"> <a  class="white-text" href="tel:+233 302 441 765">+233 302 441 765</a> </div>
+           </div>   
+            <div class="row">
+               <div class="col l1 s1 m1">
+                   <i class="material-icons">facebook</i>
+               </div>
+               <div class="col l10 s10 m10" style="margin-left:5px"> <a class="white-text" href="">ZF1 Garden Logistics</a> </div>
+           </div>   
+               
+            
+            
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container" style="text-align:center">
+      <span>Copyright 2021 ZF1 Garden Logistics all rights reserved</span> <br>
+      Powered by <a class="brown-text text-lighten-3" href="http://ravinlead.com">RavinLead Tech Hub</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+   <script src="dist/aos.js" ></script>
+    <script src="js/index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+<script>
+    
+    $(document).ready(function(){
+    $('select').formSelect();
+      $('.shipping').hide()
+        $('.modal').modal();
+         $('.carousel').carousel();
+                 AOS.init({
+//        easing: 'ease-in-out-sine'
+      });
+        
+        function Variables(){
+        this.time=String(new Date())
+        this.time_split=(this.time).split(' ')
+        this.day=this.time_split[0]
+        this.date_day=this.time_split[2]
+        this.date_month=this.time_split[1]
+        this.date_year=this.time_split[3]
+        this.date=this.time_split[1]+' '+this.time_split[2]+' '+this.time_split[3]
+        this.time_=this.time_split[4]
+        this.hour=(this.time_.split(':'))[0]
+        this.min=(this.time_.split(':'))[1]
+        this.sec=(this.time_.split(':'))[2]
+        this.data=''
+        this.data_select=''
+        this.months={Jan:'01', Feb:'02', Mar:'03', Apr:'04', May:'05', Jun:'06', Jul:'07', Aug:'08', Sep:'09', Oct:'10', Nov:'11', Dec:'12'}
+        this.counter=0
+    
+    }
+    const variable = new Variables()
+  
+  
+     var fd = new FormData();   
+    fd.append("getter", 1)
+    $.ajax({
+            url: "phpmailer/input.php"
+            , type: "POST"
+            , async: false
+            , data: fd
+            , contentType: false
+            , processData: false
+            , success: function (data) {
+                console.log(data)
+                variable.data=JSON.parse(data)
+                variable.counter=JSON.parse(data).length
+                console.log(JSON.parse(data).length)
+            }
+        })
+        
+       $('#tracker').submit(function(e){
+           var counter=0
+           var tracking_number = $('#textarea1').val()
+           console.log(variable.data)
+           console.log(tracking_number)
+           for(var i in variable.data){
+               if(variable.data[i][12]==tracking_number){
+                   counter=1
+                   variable.data_select=variable.data[i]
+//                   console.log(variable.data[i])
+                    $('.sender').text(variable.data[i][0].toUpperCase()+" "+variable.data[i][1].toUpperCase())
+                   $('.receiver').text(variable.data[i][6].toUpperCase()+" "+variable.data[i][7].toUpperCase())
+                   $('.status').text(variable.data[i][15])
+                   $('.destination').text(variable.data[i][10].toUpperCase()+", "+variable.data[i][11].toUpperCase())
+                    $('.date').text(variable.data[i][14])
+//                    $('.date_').text(variable.date)
+                   if(variable.data[i][18]!='Unpaid'){
+                    $('.amount_paid').text('$ '+variable.data[i][18])
+                    $('.date_').text(variable.data[i][19])
+                   }
+                   else{
+                       $('.amount_paid').text(variable.data[i][18])
+                       
+                       $('.date_').text('')
+                        }
+                    $('.tracking_').text(variable.data[i][12])
+                    $('.contact').text(variable.data[i][8])
+//                   var data=JSON.parse(variable.data_select[13])
+                    $('.shipping').show()
+                    $('.loader').hide()
+
+               }
+           }
+           if(counter==0){
+            swal("Invalid Tracking Number", "please enter a valid tracking number", "error");
+ 
+           }
+       })
+        
+        $(".viewer").click(function(e){
+            console.log(variable.data_select)
+            var data=JSON.parse(variable.data_select[13])
+            console.log(data)
+            $(".body").text("")
+             var total=0
+             for(var i in data){
+                var count=parseInt(i)+1
+                var price_=data[i][6]
+                price_=parseFloat(price_).toFixed(2)
+                total=parseFloat(price_)+parseFloat(total)
+                console.log(price_)
+                console.log(total)
+                  $(".body").append("<tr><td>"+count+"</td><td>"+data[i][0]+"</td><td>"+data[i][4]+"</td><td>"+data[i][5]+"</td><td>"+price_+"</td></tr>")
+                
+                
+            }
+
+  $(".total_price").text(total)
+        })
+        
+      
+                $(".loading").hide()
+
+        
+  });
+    
+</script>
+  
+
+  </body>
+</html>

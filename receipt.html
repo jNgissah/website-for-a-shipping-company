@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="shortcut icon" type="image/x-icon" href="img/log.jpeg">
+
+  <title>ZF1 Garden Logistics</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="dist/aos.css">
+</head>
+<body>
+ 
+ <div class="container receipt_ " id="printarea" >
+     
+     <div class="receipt" style="padding-top:20px">
+        <div class="center-align">
+            
+      
+         <img src="file:///C:/xampp/htdocs/shipping/img/logo12.svg" width="16%" alt="">
+         <br>
+         <span><b>Accra, Taifa Taxi Station</b></span><br>
+         <span><b>+233 509766847</b></span><br>
+         <span style="font-size:23px"><b>Payment Receipt</b></span>
+         </div>
+         <br>
+         <div class="row">
+             <div class="col l4 s4 m4">
+               <p class=""> <b>BILL TO</b> </p>  
+               <span>John Kofi</span><br>
+               <span>plot 24 block 3, kumasi</span><br>
+               <span>0243344343</span><br>
+             </div>
+            
+            <div class="col l4 s4 m4">
+                <p class=""> <b>SHIP TO</b> </p>  
+                <span>John Kofi</span><br>
+               <span>plot 24 block 3, kumasi</span><br>
+               <span>0243344343</span><br>
+             </div>
+             
+              <div class="col l4 s4 m4">
+                 <span><b>Date:</b> <span>date</span></span><br>
+                 <span><b>Receipt Number:</b> <span>23432276</span></span><br>
+                 <span><b>Tracking Number:</b> <span>23432276</span></span><br>
+             </div>
+         </div>
+         <hr>
+           <table class="striped responsive-table ">
+        <thead>
+          <tr>
+              <th></th>
+              <th>Item</th>
+              <th>CBM</th>
+              <th>Quantity</th>
+              <th>Price (GHC)</th>
+          </tr>
+        </thead>
+
+        <tbody class="put_items_receipt  clear">
+          
+          <tr>
+              <td>1</td>
+              <td>book</td>
+              <td>234</td>
+              <td>2</td>
+              <td>245</td>
+          </tr><tr>
+              <td>1</td>
+              <td>book</td>
+              <td>234</td>
+              <td>2</td>
+              <td>245</td>
+          </tr>
+          
+            
+        </tbody>
+         
+      </table>
+       <hr>
+        <b>Total : <span>GHC 425</span></b>
+         <hr>
+        <div style="margin-top:60px">
+            
+            .....................................................................
+        </div> 
+     </div>
+     
+     
+ </div>
+  
+  <button class="printer">print</button>
+   
+
+
+
+  <!--  Scripts-->
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="dist/aos.js"></script>
+  <script src="js/printThis.js"></script>
+  <script src="js/index.js"></script>
+
+<script>
+    
+    $(document).ready(function(){
+         AOS.init({
+//        easing: 'ease-in-out-sine'
+      });
+  
+        $('.carousel').carousel();
+           function Variables(){
+        this.time=String(new Date())
+        this.time_split=(this.time).split(' ')
+        this.day=this.time_split[0]
+        this.date_day=this.time_split[2]
+        this.date_month=this.time_split[1]
+        this.date_year=this.time_split[3]
+        this.date=this.time_split[1]+' '+this.time_split[2]+' '+this.time_split[3]
+        this.time_=this.time_split[4]
+        this.hour=(this.time_.split(':'))[0]
+        this.min=(this.time_.split(':'))[1]
+        this.sec=(this.time_.split(':'))[2]
+        this.data=''
+        this.data_select=''
+        this.months={Jan:'01', Feb:'02', Mar:'03', Apr:'04', May:'05', Jun:'06', Jul:'07', Aug:'08', Sep:'09', Oct:'10', Nov:'11', Dec:'12'}
+        this.counter=0
+    
+    }
+    const variable = new Variables()
+  
+  
+     var fd = new FormData();   
+    fd.append("getter", 1)
+    $.ajax({
+            url: "phpmailer/input.php"
+            , type: "POST"
+            , async: false
+            , data: fd
+            , contentType: false
+            , processData: false
+            , success: function (data) {
+                console.log(JSON.parse(data))
+                variable.data=JSON.parse(data)
+                variable.counter=JSON.parse(data).length
+                console.log(JSON.parse(data).length)
+            }
+        })
+     
+        
+        
+    $('.tabs').tabs();
+//    
+//        $('.printer').click(function(e){
+//            $('.printarea').printThis({
+//        debug: false,               // show the iframe for debugging
+//        importCSS: true,            // import parent page css
+//        importStyle: false,         // import style tags
+//        printContainer: true,       // print outer container/$.selector
+//        loadCSS: ["file:///C:/xampp/htdocs/shipping/css/materialize.css","file:///C:/xampp/htdocs/shipping/css/style.css"],                // path to additional css file - use an array [] for multiple
+//        pageTitle: "print",              // add title to print page
+//        removeInline: false,        // remove inline styles from print elements
+//        removeInlineSelector: "*",  // custom selectors to filter inline styles. removeInline must be true
+//        printDelay: 333,            // variable print delay
+//        header: null,               // prefix to html
+//        footer: null,               // postfix to html
+//        base: false,                // preserve the BASE tag or accept a string for the URL
+//        formValues: true,           // preserve input/form values
+//        canvas: false,              // copy canvas content
+//        doctypeString: '<!DOCTYPE html>', // enter a different doctype for older markup
+//        removeScripts: false,       // remove script tags from print content
+//        copyTagClasses: false,      // copy classes from the html & body tag
+//        beforePrintEvent: null,     // callback function for printEvent in iframe
+//        beforePrint: null,          // function called before iframe is filled
+//        afterPrint: null            // function called before iframe is removed
+//            })
+//        })
+// 
+        
+  });
+    </script>
+
+  </body>
+</html>

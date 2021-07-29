@@ -1,0 +1,476 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+    .loading{
+        width: 100%;
+        position: fixed;
+        height: 20%;
+        z-index: 2;
+        height: 100%;
+        background-color: white;
+        padding-top: 1%; 
+        text-align: center;
+/*        display: none;*/
+    }
+    
+    .loading_data img{
+        margin-top: 70%;
+        width: 10%;
+    }  
+    
+    .loading_data{
+        width: 100%;
+        position: fixed;
+        height: 20%;
+        z-index: 2;
+        height: 100%;
+        background-color: white;
+        padding-top: 1%; 
+        text-align: center;
+        display: none;
+    }
+    
+    .loading img{
+        margin-top: 70%;
+        width: 10%;
+    } 
+    
+     .loader{
+        width: 80%;
+        position: absolute;
+        height: 20%;
+        z-index: 999;
+/*        background-color: red;*/
+        padding-top: 1%;
+         display: none;
+            
+        
+    }
+    .down{
+        margin-top: -100px;
+         padding: 30px;
+        
+             
+    }
+    .inner{
+        background-color: white;
+        padding: 10px
+    }
+    .downer{
+        margin: 8px;
+
+    }
+    
+    .main_write{
+        margin-top: 120px;
+        font-size: 50px    
+    }
+    
+    #track1{
+        display: none
+    } #track2{
+        display: block
+    }
+    #input1{
+    border: solid;
+    border-width: 1px;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-color: lightgray;
+    width: 80%;
+    margin-left: 20%;
+    z-index: 222;
+    padding-left: 10px
+}
+
+    #btn1{
+   height: 44px ;
+    width: 100%;
+    margin-left: -20px;
+    background-color: #F86B00;
+}
+    
+    .color{
+        display: none;
+    }
+     .parasmall{
+        display:block
+    }
+    .parabig{
+        display:none
+    }
+    
+    #logo_img{
+        width: 90%;
+        padding-top: 10px
+    }
+    
+    #logo-container{
+        width: 20%
+    }
+    
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+    .parallax-container .parallax img {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 180%;
+  min-height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+}
+
+
+
+@media only screen and (min-width : 992px) {
+    .loading{
+        width: 100%;
+        position: fixed;
+        height: 20%;
+        z-index: 1;
+        height: 100%;
+        background-color: white;
+        padding-top: 1%; 
+        text-align: center;
+/*        display: none;*/
+    }
+    
+    .loading img{
+        margin-top: 20%;
+        width: 3%;
+    } 
+    
+    .loading_data{
+        width: 100%;
+        position: fixed;
+        height: 20%;
+        z-index: 9999;
+        height: 100%;
+        background-color:rgba(255,255,255,0.7);
+        padding-top: 1%; 
+        text-align: center;
+        display: none;
+    }
+    
+    .loading_data img{
+        margin-top: 20%;
+        width: 3%;
+    } 
+    
+    .loader{
+        width: 50%;
+        position: absolute;
+        height: 20%;
+        z-index: 999;
+/*        background-color: red;*/
+        padding-top: 1%;    
+        
+        display: none;
+    }
+    
+    .loader img{
+        width: 5%;
+    }
+    #track2{
+        display: none
+    } #track1{
+        display: block
+    }
+    #input{
+    border: solid;
+    border-width: 1px;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-color: lightgray;
+    width: 80%;
+    margin-left: 20%;
+    z-index: 222;
+    padding-left: 10px
+}
+
+#btn{
+   height: 46px ;
+    width: 60%;
+    margin-left: -20px;
+    background-color: #F86B00;
+    
+}
+    
+    
+    .down{
+        margin-top: -50px; 
+         vertical-align:middle;
+    }
+    .inner{
+        background-color: white;
+        padding: 10px;
+        height: 90px;
+            
+/*        line-height: 10px;*/
+    }
+    .downer{
+        background-color: ;
+         vertical-align:middle;
+/*        padding: 5px*/
+    }
+    
+   #logo_img{
+        width: 60%;
+       padding-top: 15px
+    }  
+    
+    
+    #logo-container{
+        width: 20%
+    }
+    .parallax-container .parallax img {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+    
+   .parasmall{
+        display:none
+    }
+    
+    .parabig{
+        display:block
+    }
+}
+
+
+
+@media only screen and (max-width : 600px) {
+    
+    .loading{
+        width: 100%;
+        position: fixed;
+        height: 20%;
+        z-index: 2;
+        height: 100%;
+        background-color: white;
+        padding-top: 1%; 
+        text-align: center;
+/*        display: none;*/
+    }
+    
+    .loading img{
+        margin-top: 70%;
+        width: 10%;
+    } 
+    
+     .loading_data{
+        width: 100%;
+        position: fixed;
+        height: 20%;
+        z-index: 2;
+        height: 100%;
+        background-color: white;
+        padding-top: 1%; 
+        text-align: center;
+        display: none;
+    }
+    
+    .loading_data img{
+        margin-top: 70%;
+        width: 10%;
+    } 
+    
+    
+    
+    .color{
+        display: none
+    }
+    .parasmall{
+        display:block
+    }
+    .parabig{
+        display:none
+    }
+     #logo_img{
+        width: 100%;
+         padding-top: 10px
+    }
+    
+    #logo-container{
+        width: 35%
+    }
+    
+    
+  #index-banner .section {
+    top: 0;
+  }
+    .parallax-container .parallax img {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 180%;
+  min-height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+.coloring_call{
+background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,234,95,1) 50%, rgba(255,255,255,1) 100%);
+    
+}
+
+.coloring_call_{
+background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 13%, rgba(178,179,185,1) 50%, rgba(255,255,255,1) 81%);
+}
+
+.color{
+  background-color: #F86B00;
+background-image: linear-gradient(315deg,  #f86B3e 0%, #F86B00 74%);
+    height: 450px;
+   
+}
+.btn_sub{
+      background-color: #F86B00;
+background-image: linear-gradient(315deg,  #f86B3e 0%, #F86B00 74%);
+    color:white;
+    
+}
+.new_color{
+    color:#F86B00; 
+}
+.new_color_{
+    background-color:#F86B00; 
+}
+
+.calculator{
+    background-color: white;
+    color: grey;
+/*    padding-top:200px;*/
+}
+
+.back{
+ 
+    background-image: url(../img/world.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+   
+}
+
+.back_{
+    background-color: rgba(255,255,255,0.7);
+/*    height: 400px;*/
+    
+}
+.backing{
+    background-image: url(../img/pics/cargo-ship.svg);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center;
+}
+
+.backer{
+    background-color: rgba(255,255,255,0.8);
+    
+}
+
+.paralax_bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 444;
+    background-color: rgba(0,0,0,0.5)
+}
+.backing_{
+    width: 100%;
+    background-image: url(../img/user.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.more{
+    margin: 15px;
+}
+.search_btn{
+    display: none;
+
+}.search_results, .shipping{
+    display: none;
+
+}
+.receipt_{
+    background-image: url(https://www.zf1logistics.com/img/logo12.svg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+}
+.receipt{
+    background-color: rgba(255,255,255,0.9);
+}
+#printarea{
+    display: none
+}
